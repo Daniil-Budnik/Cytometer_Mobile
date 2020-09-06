@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1B1B1B"
+    android:backgroundTintMode="add"
+    tools:context=".StartActiv">
+
+
+    <LinearLayout
+        android:id="@+id/LevelOne"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ButBox"
+                android:layout_width="match_parent"
+                android:layout_height="100px"
+                android:background="#CCFFDD00"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/ConnectB"
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Connect"
+                    android:textColor="#000000" />
+
+                <Button
+                    android:id="@+id/StartB"
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Start"
+                    android:textColor="#000000" />
+
+                <Button
+                    android:id="@+id/PauseB"
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Pause"
+                    android:textColor="#000000" />
+
+                <Button
+                    android:id="@+id/ConfigB"
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Config"
+                    android:textColor="#000000" />
+
+                <Button
+                    android:id="@+id/ExtraB"
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Extra"
+                    android:textColor="#000000" />
+
+                <Button
+                    android:id="@+id/MenuB"
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="#DDDDDD"
+                    android:text="Menu"
+                    android:textColor="#000000" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/CharBox"
+            android:layout_width="match_parent"
+            android:layout_height="420px"
+            android:layout_marginTop="20px"
+            android:orientation="horizontal">
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/GraphChar"
+                android:layout_width="850px"
+                android:layout_height="match_parent">
+
+            </com.github.mikephil.charting.charts.LineChart>
+
+            <LinearLayout
+                android:id="@+id/ConfMenu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20px"
+                android:layout_marginRight="20px"
+                android:layout_marginBottom="40px"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#81FFFFFF"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/ConfText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#99000000"
+                        android:gravity="center"
+                        android:text="Config Menu"
+                        android:textColor="#FFFFFF" />
+
+                    <Switch
+                        android:id="@+id/SFG"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20px"
+                        android:layout_marginTop="50px"
+                        android:layout_marginRight="20px"
+                        android:background="#4D000000"
+                        android:checked="true"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:text="Show Frequency Graph"
+                        android:textColor="#FFFFFF"
+                        android:thumbTint="#FF6F00"
+                        android:trackTint="#FF6D00" />
+
+                    <Switch
+                        android:id="@+id/STG"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20px"
+                        android:layout_marginTop="10px"
+                        android:layout_marginRight="20px"
+                        android:background="#4D000000"
+                        android:checked="true"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:text="Show Trace Graph"
+                        android:textColor="#FFFFFF"
+                        android:thumbTint="#FF6F00"
+                        android:trackTint="#FF6D00" />
+
+                    <Switch
+                        android:id="@+id/GRAPH_INTERACT"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20px"
+                        android:layout_marginTop="10px"
+                        android:layout_marginRight="20px"
+                        android:background="#4D000000"
+                        android:checked="false"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:text="Graphic Interactive"
+                        android:textColor="#FFFFFF"
+                        android:thumbTint="#FF6F00"
+                        android:trackTint="#FF6D00" />
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/BtMenu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20px"
+                android:layout_marginBottom="40px"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:scrollbarThumbHorizontal="@android:color/background_dark">
+
+                    <TextView
+                        android:id="@+id/TextInfo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20px"
+                        android:background="#33FFFFFF"
+                        android:gravity="center"
+                        android:text="NAME/ADDRES (ERROR)"
+                        android:textColor="#FFFFFF" />
+
+                    <ListView
+                        android:id="@+id/ListV"
+                        style="@style/CardView.Dark"
+                        android:layout_width="match_parent"
+                        android:layout_height="220px"
+                        android:layout_marginTop="10px"
+                        android:layout_marginRight="20px"
+                        android:background="#E6D3D3D3"
+                        android:cacheColorHint="#25FFFFFF"
+                        android:foreground="@android:color/background_dark"
+                        android:foregroundTint="#00FFFFFF"
+                        android:transcriptMode="normal" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20px"
+                        android:background="#70FFFFFF"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/UpData_BT_B"
+                            android:layout_width="510px"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5px"
+                            android:text="UpData" />
+
+                        <Button
+                            android:id="@+id/Discon_BT_B"
+                            android:layout_width="510px"
+                            android:layout_height="wrap_content"
+                            android:text="Disconnect" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ExtraMenu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20px"
+                android:layout_marginRight="20px"
+                android:layout_marginBottom="40px"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#81FFFFFF"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/ExtraText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#99000000"
+                        android:gravity="center"
+                        android:text="Extra Menu"
+                        android:textColor="#FFFFFF" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="340px"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5px"
+                            android:layout_marginTop="20px"
+                            android:orientation="vertical">
+
+                            <Button
+                                android:id="@+id/SaveB"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Save" />
+
+                            <Button
+                                android:id="@+id/LoadB"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Load" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="340px"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="20px"
+                            android:orientation="vertical">
+
+                            <Button
+                                android:id="@+id/BT2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="..." />
+
+                            <Button
+                                android:id="@+id/BT5"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="..." />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="340px"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="20px"
+                            android:orientation="vertical">
+
+                            <Button
+                                android:id="@+id/BT3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="..." />
+
+                            <Button
+                                android:id="@+id/SpeedB"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Speed Test" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/SaveMenu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20px"
+                android:layout_marginRight="20px"
+                android:layout_marginBottom="40px"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#81FFFFFF"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/SaveText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#99000000"
+                        android:gravity="center"
+                        android:text="Save Menu"
+                        android:textColor="#FFFFFF" />
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/OrLine1"
+            android:layout_width="match_parent"
+            android:layout_height="4px"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:src="@android:color/holo_orange_dark" />
+
+        <LinearLayout
+            android:id="@+id/TraisBox"
+            android:layout_width="match_parent"
+            android:layout_height="435px"
+            android:layout_marginTop="4px"
+            android:orientation="horizontal">
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/TraisChar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10px" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/OrLine2"
+            android:layout_width="match_parent"
+            android:layout_height="4px"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="5px"
+            android:layout_marginRight="8dp"
+            android:src="@android:color/holo_orange_dark" />
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
